@@ -41,14 +41,14 @@ function logupbtn(){
 
 
     }else if(!validname()){
-        document.getElementById("wrong").innerHTML="Name Not Valid"
+        document.getElementById("wrong").innerHTML="Name must be at least 3 letter without chracter and numbers:"
        
     }
     else if(!validemaill()){
-        document.getElementById("wrong").innerHTML="Email Not Valid"
+        document.getElementById("wrong").innerHTML="Email Not Valid 'example123@example.com'"
        
     }else if(!validpass()){
-        document.getElementById("wrong").innerHTML="Password Not Valid"
+        document.getElementById("wrong").innerHTML="password must 8 characters, at least one uppercase letter, one lowercase letter and one number:"
        
     }
     
@@ -113,23 +113,12 @@ function validpass(){
 
 
 
-passwordup.addEventListener("click",function(){
-
-alert("Minimum eight characters, at least one uppercase letter, one lowercase letter and one number:")
-
-
-})
 
 
 
 
 
-emailup.addEventListener("click",function(){
 
-    alert("'example123@example.com'.")
-    
-    
-    })
 
 
 function validemaill(){
@@ -144,10 +133,3 @@ function validname(){
     var regex= /\b[a-zA-Z]{3,10}\b$/
     return regex.test(nameup.value)
 }
-
-nameup.addEventListener("click",function(){
-
-    alert("Name must be at least 3 letter without chracter and numbers:")
-    
-    
-    })
